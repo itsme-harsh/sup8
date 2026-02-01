@@ -1,7 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { getToday } from "./utils/weekdays";
+import { getCurrentWeekOfMonth } from "./utils/getDayContent";
 
-const RANKINGS_URL = "https://raw.githubusercontent.com/itsme-harsh/sup8/tree/main/json";
+const RANKINGS_URL = "https://raw.githubusercontent.com/itsme-harsh/sup8/refs/heads/main/json/data.json";
 
 function App() {
   const weeks = getCurrentWeekOfMonth();
@@ -45,12 +46,12 @@ function App() {
         {/* Header */}
         <h1 className="text-white text-3xl font-bold mb-6 text-center">
           🏆 Train Conductors 🏆 
-        <p className="text-xs text-gray-400">From: {weeks.start}–{weeks.end} {weeks.month}</p>
+        <p className="text-xs text-gray-400">From: {weeks.start}–{weeks.end} {weeks.month} {weeks.year}</p>
         </h1>
 
         {/* Ranking List */}
         <div className="space-y-4">
-          {RANKINGS.map((rank) => (
+          {rankings.map((rank) => (
             <RankCard
               key={rank.rank}
               {...rank}

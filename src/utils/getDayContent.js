@@ -14,8 +14,9 @@ export function getCurrentWeekOfMonth() {
   if (weekEndDay > lastDayOfMonth) weekEndDay = lastDayOfMonth;
 
   return {
-    start: `${weekStartDay}`,
-    end: `${weekEndDay}`,
+    start: String(weekStartDay).padStart(2, "0"),
+    end: String(weekEndDay).padStart(2, "0"),
     month,
+    year,
   };
 }
