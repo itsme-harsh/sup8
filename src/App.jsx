@@ -1,15 +1,13 @@
 import { useEffect, useState } from "react";
 import { getToday } from "./utils/weekdays";
-import { getCurrentWeekOfMonth } from "./utils/getDayContent";
 
 const RANKINGS_URL = "https://raw.githubusercontent.com/itsme-harsh/sup8/refs/heads/main/json/data.json";
 
 function App() {
-  const weeks = getCurrentWeekOfMonth();
   const today = getToday();
 
+  const [date, setDate] = useState("");
   const [rankings, setRankings] = useState([]);
-  const [week, setWeek] = useState("");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -20,7 +18,7 @@ function App() {
       })
       .then((data) => {
         setRankings(data.rankings || []);
-        setWeek(data.week || "");
+        setDate(data.other.date || "");
       })
       .catch((err) => {
         console.error(err);
@@ -46,12 +44,12 @@ function App() {
         {/* Header */}
         <h1 className="text-white text-3xl font-bold mb-6 text-center">
           🏆 Train Conductors 🏆 
-        <p className="text-xs text-gray-400">From: {weeks.start}–{weeks.end} {weeks.month} {weeks.year}</p>
+        <p className="text-xs text-gray-400">From: {date}</p>
         </h1>
 
         {/* Ranking List */}
         <div className="space-y-4">
-          {rankings.map((rank) => (
+          {rankings.map((rank, index) => (
             <RankCard
               key={rank.rank}
               {...rank}
