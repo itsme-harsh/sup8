@@ -49,5 +49,8 @@
       "bg": "bg-green-400",
       "day": "Sunday"
     }
-  ]
+  ],
+  "other":{
+    "date": "02–07 Feb 2026"
+  }
 }
