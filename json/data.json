@@ -2,50 +2,50 @@
   "rankings": [
     {
       "rank": "1",
-      "name": "JoKaPa",
-      "score": "133,070,820",
+      "name": "Hañsu",
+      "score": "111,972,817",
       "bg": "bg-yellow-400",
       "day": "Monday"
     },
     {
       "rank": "2",
-      "name": "Maverick88",
-      "score": "115,518,105",
+      "name": "WalterOP",
+      "score": "110,444,089",
       "bg": "bg-blue-300",
       "day": "Tuesday"
     },
     {
       "rank": "3",
-      "name": "Hãñsu",
-      "score": "111,972,817",
+      "name": "Rockjilhut",
+      "score": "97,721,977",
       "bg": "bg-orange-300",
       "day": "Wednesday"
     },
     {
       "rank": "4",
-      "name": "WalterOP",
-      "score": "110,444,089",
+      "name": "Hansu II",
+      "score": "94,282,304",
       "bg": "bg-gray-300",
       "day": "Thursday"
     },
     {
       "rank": "5",
-      "name": "Rockjilhut",
-      "score": "97,721,977",
+      "name": "kiran99",
+      "score": "93,777,604",
       "bg": "bg-gray-300",
       "day": "Friday"
     },
     {
       "rank": "6",
-      "name": "ItzMeHarsh",
-      "score": "48,727,259",
+      "name": "Jordan1491",
+      "score": "82,497,552",
       "bg": "bg-gray-300",
       "day": "Saturday"
     },
     {
       "rank": "7",
-      "name": "Angrybird i",
-      "score": "48,727,259",
+      "name": "{{donation_user}}",
+      "score": "{{donations_score}}",
       "bg": "bg-green-400",
       "day": "Sunday"
     }
