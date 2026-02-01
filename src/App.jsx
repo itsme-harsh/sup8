@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { getToday } from "./utils/weekdays";
 
-const RANKINGS_URL = "https://raw.githubusercontent.com/USERNAME/REPO/main/rankings.json";
+const RANKINGS_URL = "https://raw.githubusercontent.com/itsme-harsh/sup8/tree/main/json";
 
 function App() {
-
+  const weeks = getCurrentWeekOfMonth();
   const today = getToday();
 
   const [rankings, setRankings] = useState([]);
@@ -45,7 +45,7 @@ function App() {
         {/* Header */}
         <h1 className="text-white text-3xl font-bold mb-6 text-center">
           🏆 Train Conductors 🏆 
-        <p className="text-xs text-gray-400">From: 02–09 Feb 2026</p>
+        <p className="text-xs text-gray-400">From: {weeks.start}–{weeks.end} {weeks.month}</p>
         </h1>
 
         {/* Ranking List */}
